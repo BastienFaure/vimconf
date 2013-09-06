@@ -1,2 +1,5 @@
 # Backups folder
 backups/
+
+# netrwhist
+.netrwhist
