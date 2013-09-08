@@ -113,6 +113,10 @@ set sidescroll=1
 
 set mouse=a
 
+" =================== LateX  ========================
+
+let g:tex_flavor = "latex"
+
 " =================== Encoding ======================
 "set encoding=utf-8
 "set fileencodings=utf-8
