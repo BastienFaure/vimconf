@@ -2,8 +2,8 @@
 	path = bundle/vundle
     url = https://github.com/gmarik/vundle.git
 
-[submodule "bundle/LaTex-Box"]
-	path = bundle/LaTex-Box
+[submodule "bundle/LaTeX-Box"]
+	path = bundle/LaTeX-Box
     url = https://github.com/LaTex-Box-Team/LaTeX-Box.git
 
 [submodule "bundle/nerdtree"]
