@@ -12,3 +12,6 @@ Bundle 'scrooloose/nerdtree'
 map <C-n> :NERDTreeToggle<CR>
 
 " Swiss knife for web devs Bundle '2072/PHP-Indenting-for-VIm'
+
+" Latex Box
+Bundle 'LaTeX-Box-Team/LaTeX-Box'
