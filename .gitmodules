@@ -1,0 +1,15 @@
+[submodule "bundle/vundle"]
+	path = bundle/vundle
+    url = https://github.com/gmarik/vundle.git
+
+[submodule "bundle/LaTex-Box"]
+	path = bundle/LaTex-Box
+    url = https://github.com/LaTex-Box-Team/LaTeX-Box
+
+[submodule "bundle/nerdtree"]
+	path = bundle/nerdtree
+    url = https://github.com/scrooloose/nerdtree.git
+
+[submodule "bundle/vim-markdown"]
+	path = bundle/vim-markdown
+    url = https://github.com/tpope/vim-markdown.git
