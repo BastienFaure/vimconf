@@ -4,7 +4,7 @@
 
 [submodule "bundle/LaTeX-Box"]
 	path = bundle/LaTeX-Box
-    url = https://github.com/LaTex-Box-Team/LaTeX-Box.git
+    url = https://github.com/LaTeX-Box-Team/LaTeX-Box.git
 
 [submodule "bundle/nerdtree"]
 	path = bundle/nerdtree
