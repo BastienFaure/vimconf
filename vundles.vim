@@ -15,3 +15,6 @@ map <C-n> :NERDTreeToggle<CR>
 
 " Latex Box
 Bundle 'LaTeX-Box-Team/LaTeX-Box'
+
+" Vim-airline
+Bundle 'bling/vim-airline'
