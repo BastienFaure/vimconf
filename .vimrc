@@ -122,3 +122,9 @@ let g:tex_flavor = "latex"
 "set fileencodings=utf-8
 "set fileencoding=utf-8
 
+" =============== Vim-Airline =======================
+" Always show statusline
+set laststatus=2
+
+"  Use 256 colours (Use this setting only if your terminal supports 256 colours)
+set t_Co=256
