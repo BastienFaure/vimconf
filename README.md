@@ -6,11 +6,11 @@ My awesome vim configuration (vimrc and plugins). Thanks to all awesome vim plug
 Install
 =======
 
-First create a symlink of the .vimrc file in your homedir :
+Clone the repository and all associated submodules :
+    git clone --recursive https://github.com/BastienFaure/vimconf .vim
+
+Now create a symlink of the .vimrc file in your homedir :
 
     cd && ln -s .vim/.vimrc .vimrc
 
-Then init and update git submodule system :
-
-    cd  ~/.vim
-    git submodule update --init --remote
+Now open vim and run BundleUpdate command.
