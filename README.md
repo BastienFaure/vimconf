@@ -13,5 +13,4 @@ First create a symlink of the .vimrc file in your homedir :
 Then init and update git submodule system :
 
     cd  ~/.vim
-    git submodule init
-    git submodule update
+    git submodule update --init --remote
