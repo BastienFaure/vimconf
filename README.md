@@ -7,6 +7,7 @@ Install
 =======
 
 Clone the repository and all associated submodules :
+
     git clone --recursive https://github.com/BastienFaure/vimconf .vim
 
 Now create a symlink of the .vimrc file in your homedir :
