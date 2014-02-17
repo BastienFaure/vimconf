@@ -117,6 +117,10 @@ set mouse=a
 
 let g:tex_flavor = "latex"
 
+" ============== Custom Filetypes ===================
+
+au BufNewFile,BufRead *.xrc set filetype=xdefaults
+
 " =================== Encoding ======================
 "set encoding=utf-8
 "set fileencodings=utf-8
