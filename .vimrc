@@ -112,6 +112,7 @@ set sidescroll=1
 " =================== Mouse  ========================
 
 set mouse=a
+set ttymouse=urxvt
 
 " =================== LateX  ========================
 
