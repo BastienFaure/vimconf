@@ -18,3 +18,16 @@ Bundle 'LaTeX-Box-Team/LaTeX-Box'
 
 " Vim-airline
 Bundle 'bling/vim-airline'
+
+"Python pep8 & pyflakes
+"Bundle 'nvie/vim-flake8'
+
+"Bundle 'scrooloose/syntastic'
+
+"Bundle 'tpope/vim-surround'
+
+"Snipmate
+Bundle 'msanders/snipmate.vim'
+
+"SaltStack
+Bundle 'saltstack/salt-vim'

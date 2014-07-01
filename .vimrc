@@ -111,8 +111,8 @@ set sidescroll=1
 
 " =================== Mouse  ========================
 
-set mouse=a
-set ttymouse=urxvt
+" set mouse=a
+" set ttymouse=urxvt
 
 " =================== LateX  ========================
 
@@ -130,6 +130,11 @@ au BufNewFile,BufRead *.xrc set filetype=xdefaults
 " =============== Vim-Airline =======================
 " Always show statusline
 set laststatus=2
-
+let g:airline_powerline_fonts=1
 "  Use 256 colours (Use this setting only if your terminal supports 256 colours)
 set t_Co=256
+
+" =============== Gvim ===============================
+" Hide toolbar and menubar
+set guioptions-=m  "menu bar
+set guioptions-=T  "toolbar
