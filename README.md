@@ -15,3 +15,10 @@ Now create a symlink of the .vimrc file in your homedir :
     cd && ln -s .vim/.vimrc .vimrc
 
 Now open vim and run BundleUpdate command.
+
+Updating
+========
+
+    git submodule update --remote
+    git add bundle/vundle
+    git commit -m "Updated vundle"
