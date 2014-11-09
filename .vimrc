@@ -38,11 +38,14 @@ let mapleader=","
 " Use Vundle plugin to manage all other plugins
 
 set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+call vundle#begin()
 
+" List of bundles are defined in vundles.vim file
 if filereadable(expand("~/.vim/vundles.vim"))
   source ~/.vim/vundles.vim
 endif
+
+call vundle#end()
 
 
 " ================ Turn Off Swap Files ==============
