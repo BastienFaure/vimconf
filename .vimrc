@@ -68,13 +68,13 @@ set undolevels=1000 "maximum number of changes that can be undone
 
 " ================ Indentation ======================
 
-set autoindent
-set smartindent
+set autoindent      " indent following line in the same manner than actual
+set smartindent     " same than autoindent but support braces indentation
 set smarttab
-set shiftwidth=4
-set softtabstop=4
-set tabstop=4
-set expandtab
+set shiftwidth=4    " number of columns when using reindent commands (<< and >>)
+set softtabstop=4   " number of spaces inserted when 'Tab' is hitted in insert mode
+set tabstop=4       " number of columns in a tab
+set expandtab       " replace tab with spaces
 
 filetype plugin on
 filetype indent on
@@ -82,7 +82,7 @@ filetype indent on
 " Display tabs and trailing spaces visually
 set list listchars=tab:\ \ ,trail:·
 
-" set nowrap       "Don't wrap lines
+set wrap       "Don't wrap lines
 set linebreak    "Wrap lines at convenient points
 
 " ================ Folds ============================
@@ -106,7 +106,6 @@ set wildignore+=log/**
 set wildignore+=tmp/**
 set wildignore+=*.png,*.jpg,*.gif
 
-"
 
 " ================ Scrolling ========================
 
