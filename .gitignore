@@ -3,3 +3,6 @@ backups/
 
 # netrwhist
 .netrwhist
+
+# Bundles
+bundle/*
