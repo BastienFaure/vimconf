@@ -24,8 +24,6 @@ set autoread                    "Reload files changed outside vim
 " http://items.sjbach.com/319/configuring-vim-right
 set hidden
 
-"turn on syntax highlighting
-syntax on
 
 " Change leader to a comma because the backslash is too far away
 " That means all \x commands turn into ,x
@@ -46,6 +44,11 @@ if filereadable(expand("~/.vim/vundles.vim"))
 endif
 
 call vundle#end()
+
+" ============== Monokai colorscheme ================
+"turn on syntax highlighting
+syntax enable
+colorscheme monokai
 
 
 " ================ Turn Off Swap Files ==============
