@@ -30,5 +30,6 @@ Plugin 'msanders/snipmate.vim'
 "SaltStack
 Plugin 'saltstack/salt-vim'
 
-"Theme Monokai
+" Additionnal themes
 Plugin 'sickill/vim-monokai'
+Plugin 'flazz/vim-colorschemes'
