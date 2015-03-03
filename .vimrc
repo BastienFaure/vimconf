@@ -126,6 +126,7 @@ let g:tex_flavor = "latex"
 " ============== Custom Filetypes ===================
 
 au BufNewFile,BufRead *.xrc set filetype=xdefaults
+au BufNewFile,BufRead *.nse set filetype=lua
 
 " =================== Encoding ======================
 "set encoding=utf-8
@@ -138,6 +139,21 @@ set laststatus=2
 let g:airline_powerline_fonts=1
 "  Use 256 colours (Use this setting only if your terminal supports 256 colours)
 set t_Co=256
+
+" ============= Syntastic ==============
+let g:syntastic_check_on_wq = 0
+let g:syntastic_check_on_open = 1
+" Automatically show the error lists
+let g:syntastic_auto_loc_list=1
+let g:syntastic_disabled_filetypes=['html']
+" Enable the sign interface
+let g:syntastic_enable_signs=1
+" Change some symbols
+let g:syntastic_error_symbol = "✗"
+let g:syntastic_style_error_symbol = "✗"
+let g:syntastic_warning_symbol = "⚠"
+let g:syntastic_style_warning_symbol = "⚠"
+let g:syntastic_always_populate_loc_list = 1
 
 " =============== Gvim ===============================
 " Hide toolbar and menubar

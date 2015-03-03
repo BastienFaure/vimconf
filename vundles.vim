@@ -25,12 +25,9 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'jmcantrell/vim-virtualenv'
 "Python pep8 & pyflakes1
 "Plugin 'nvie/vim-flake8'
-"fds
 
-
-"Plugin 'scrooloose/syntastic'
-
-"Plugin 'tpope/vim-surround'
+" Syntaxe
+Plugin 'scrooloose/syntastic'
 
 "Snipmate
 Plugin 'msanders/snipmate.vim'
