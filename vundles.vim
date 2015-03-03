@@ -17,8 +17,16 @@ Plugin 'LaTeX-Box-Team/LaTeX-Box'
 " Vim-airline
 Plugin 'bling/vim-airline'
 
-"Python pep8 & pyflakes
+" Git integration
+Plugin 'mhinz/vim-signify'
+Plugin 'tpope/vim-fugitive'
+
+" Python plugins
+Plugin 'jmcantrell/vim-virtualenv'
+"Python pep8 & pyflakes1
 "Plugin 'nvie/vim-flake8'
+"fds
+
 
 "Plugin 'scrooloose/syntastic'
 
