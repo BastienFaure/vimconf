@@ -76,6 +76,9 @@ set softtabstop=4   " number of spaces inserted when 'Tab' is hitted in insert m
 set tabstop=4       " number of columns in a tab
 set expandtab       " replace tab with spaces
 
+" Special indent for html
+au FileType html,htmldjango setl sw=2 sts=2 ts=2
+
 filetype plugin on
 filetype indent on
 
