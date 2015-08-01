@@ -78,6 +78,8 @@ set expandtab       " replace tab with spaces
 
 " Special indent for html
 au FileType html,htmldjango setl sw=2 sts=2 ts=2
+au FileType html,htmldjango setl sw=2 sts=2 ts=2
+au BufNewFile,BufRead *.sls setl sw=2 sts=2 ts=2
 
 filetype plugin on
 filetype indent on
