@@ -38,3 +38,4 @@ Plugin 'saltstack/salt-vim'
 " Additionnal themes
 Plugin 'sickill/vim-monokai'
 Plugin 'flazz/vim-colorschemes'
+Plugin 'jnurmine/Zenburn'
