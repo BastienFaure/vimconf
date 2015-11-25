@@ -14,7 +14,7 @@ Now create a symlink of the .vimrc file in your homedir :
 
     cd && ln -s .vim/.vimrc .vimrc
 
-Now open vim and run BundleUpdate command.
+Now open vim and run PluginUpdate command.
 
 Updating
 ========
