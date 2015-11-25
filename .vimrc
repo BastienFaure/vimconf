@@ -68,8 +68,8 @@ set undolevels=1000 "maximum number of changes that can be undone
 
 " ================ Indentation ======================
 
-set autoindent      " indent following line in the same manner than actual
-set smartindent     " same than autoindent but support braces indentation
+set autoindent      " replicates indentation from the previous lines to the new one
+set smartindent     " insert extra indentations for special code strucutre like classes, structs...
 set smarttab
 set shiftwidth=4    " number of columns when using reindent commands (<< and >>)
 set softtabstop=4   " number of spaces inserted when 'Tab' is hitted in insert mode
@@ -81,8 +81,8 @@ au FileType html,htmldjango setl sw=2 sts=2 ts=2
 au FileType html,htmldjango setl sw=2 sts=2 ts=2
 au BufNewFile,BufRead *.sls setl sw=2 sts=2 ts=2
 
-filetype plugin on
-filetype indent on
+filetype plugin on  " enables extended filetype detection via standards scripts and plugins
+filetype indent off " disables filetype indentation because it overrides global indent configuration
 
 " Display tabs and trailing spaces visually
 set list listchars=tab:\ \ ,trail:·
