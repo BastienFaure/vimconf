@@ -68,13 +68,13 @@ set undolevels=1000 "maximum number of changes that can be undone
 
 " ================ Indentation ======================
 
-set autoindent      " replicates indentation from the previous lines to the new one
-set smartindent     " insert extra indentations for special code strucutre like classes, structs...
-set smarttab
-set shiftwidth=4    " number of columns when using reindent commands (<< and >>)
-set softtabstop=4   " number of spaces inserted when 'Tab' is hitted in insert mode
-set tabstop=4       " number of columns in a tab
-"set expandtab       " replace tab with spaces
+set autoindent		" replicates indentation from the previous lines to the new one
+set smartindent		" insert extra indentations for special code strucutre like classes, structs...
+set smarttab		" insert shiftwidth instead of tabstop at the beginning of the line, allows tab deletion with <BS>
+set shiftwidth=4	" number of columns when using reindent commands (<< and >>)
+set softtabstop=4	" number of spaces inserted when 'Tab' is hitted in insert mode
+set tabstop=4		" number of columns in a tab
+set noexpandtab		" do not replace tab with spaces
 
 " Special indent for html
 au FileType html,htmldjango setl sw=2 sts=2 ts=2
