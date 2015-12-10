@@ -39,3 +39,6 @@ Plugin 'saltstack/salt-vim'
 Plugin 'sickill/vim-monokai'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'jnurmine/Zenburn'
+
+" Conque-Shell
+Plugin 'vim-scripts/Conque-Shell'
