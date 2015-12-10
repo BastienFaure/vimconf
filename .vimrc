@@ -32,6 +32,7 @@ set hidden
 let mapleader=","
 
 " =============== Vundle Initialization ===============
+set shell=/bin/bash
 " This loads all the plugins specified in ~/.vim/vundle.vim
 " Use Vundle plugin to manage all other plugins
 
@@ -81,8 +82,8 @@ au FileType html,htmldjango setl sw=2 sts=2 ts=2
 au FileType html,htmldjango setl sw=2 sts=2 ts=2
 au BufNewFile,BufRead *.sls setl sw=2 sts=2 ts=2
 
-filetype plugin on  " enables extended filetype detection via standards scripts and plugins
-filetype indent off " disables filetype indentation because it overrides global indent configuration
+"filetype plugin on  " enables extended filetype detection via standards scripts and plugins
+"filetype indent off " disables filetype indentation because it overrides global indent configuration
 
 " Display tabs and trailing spaces visually
 set list listchars=tab:\ \ ,trail:·
