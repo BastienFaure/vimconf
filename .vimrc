@@ -147,6 +147,7 @@ au BufNewFile,BufRead *.nse set filetype=lua
 " Always show statusline
 set laststatus=2
 let g:airline_powerline_fonts=1
+let g:airline_theme='wombat'
 "  Use 256 colours (Use this setting only if your terminal supports 256 colours)
 set t_Co=256
 
