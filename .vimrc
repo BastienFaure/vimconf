@@ -129,10 +129,6 @@ set sidescroll=1
 
 let g:tex_flavor = "latex"
 
-" =============== Python ===============
-" Linter is very annoying...
-let g:syntastic_mode_map = { 'passive_filetypes': ['python'] }
-
 " ============== Custom Filetypes ===================
 
 au BufNewFile,BufRead *.xrc set filetype=xdefaults
@@ -157,6 +153,7 @@ let g:syntastic_check_on_open = 1
 " Automatically show the error lists
 let g:syntastic_auto_loc_list=1
 let g:syntastic_disabled_filetypes=['html']
+let g:syntastic_mode_map = { 'passive_filetypes': ['python'] }
 " Enable the sign interface
 let g:syntastic_enable_signs=1
 " Change some symbols
