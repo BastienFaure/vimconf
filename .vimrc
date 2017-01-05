@@ -49,7 +49,7 @@ call vundle#end()
 " ============== Monokai colorscheme ================
 "turn on syntax highlighting
 syntax enable
-colorscheme monokai
+colorscheme hybrid_reverse
 
 
 " ================ Turn Off Swap Files ==============
@@ -128,6 +128,10 @@ set sidescroll=1
 " =================== LateX  ========================
 
 let g:tex_flavor = "latex"
+
+" =============== Python ===============
+" Linter is very annoying...
+let g:syntastic_mode_map = { 'passive_filetypes': ['python'] }
 
 " ============== Custom Filetypes ===================
 
