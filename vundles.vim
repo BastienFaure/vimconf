@@ -16,6 +16,7 @@ Plugin 'LaTeX-Box-Team/LaTeX-Box'
 
 " Vim-airline
 Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
 " Git integration
 Plugin 'mhinz/vim-signify'
@@ -30,7 +31,8 @@ Plugin 'jmcantrell/vim-virtualenv'
 Plugin 'scrooloose/syntastic'
 
 "Snipmate
-Plugin 'msanders/snipmate.vim'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
 
 "SaltStack
 Plugin 'saltstack/salt-vim'
