@@ -31,7 +31,6 @@ Plugin 'jmcantrell/vim-virtualenv'
 Plugin 'scrooloose/syntastic'
 
 "Snipmate
-Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 
 "SaltStack
