@@ -147,13 +147,15 @@ let g:airline_theme='wombat'
 "  Use 256 colours (Use this setting only if your terminal supports 256 colours)
 set t_Co=256
 
-" ============= Syntastic ==============
+" ============= Syntastic syntax checks ==============
 let g:syntastic_check_on_wq = 0
 let g:syntastic_check_on_open = 1
 " Automatically show the error lists
 let g:syntastic_auto_loc_list=1
 let g:syntastic_disabled_filetypes=['html']
-let g:syntastic_mode_map = { 'passive_filetypes': ['python'] }
+" Disable tabs warning throwns by pylint
+let g:syntastic_python_checkers = ["pep8"]
+let g:syntastic_python_pep8_args="--ignore=W191"
 " Enable the sign interface
 let g:syntastic_enable_signs=1
 " Change some symbols
