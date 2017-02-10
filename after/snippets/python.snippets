@@ -1,0 +1,154 @@
+snippet cmdexec
+	#!/usr/bin/env python
+
+	import requests
+	import argparse
+	import HTMLParser
+	import json
+	import sys
+	import cmd
+	import urllib
+	import re
+
+	CMD_PAYLOAD = "aaa;%s"
+
+	class ${1:product}(object):
+
+		def __init__(self, url, auth, proxy):
+			self.url = url
+			self.auth = auth
+			self.session = requests.session()
+			self.path = '/'
+			if proxy:
+				self.session.proxies.update(dict(http=proxy, https=proxy))
+			if auth:
+				self.username, self.password = auth
+				self.authenticate()
+
+		def authenticate(self):
+			# do auth
+			pass
+		
+		def execute(self, cmd):
+			# construct command
+			command = "cd %s; %s; pwd" % (self.path, cmd)
+			command = command.replace('"','\\"')
+			# retrieve content after execution
+			# content = r.text.splitlines()[1:-1]
+			# self.path = content[-1].strip()
+			# return "\n".join(content[:-1])
+
+
+	class $1Shell(cmd.Cmd):
+
+		def __init__(self, ${2:flawed}):
+			cmd.Cmd.__init__(self)
+			self.intro = '$1 console Shell'
+			self.$2 = $2
+			self.prompt = '>'
+
+		def default(self, cmd):
+			if cmd == 'exit':
+				sys.exit(0)
+			print self.$2.execute(cmd)
+			self.prompt = self.$2.path + '>'
+
+
+	if __name__ == '__main__':
+
+		parser = argparse.ArgumentParser('$1 RCE exploit')
+		parser.add_argument('--user', help='The username used for authentication. Anonymous access will be tried if none', required=False)
+		parser.add_argument('--password', help='The password used in combination to the username', required=False)
+		parser.add_argument('--url', help='The remote base url', required=True)
+		parser.add_argument('--cmd', help='The command to execute', required=False)
+		parser.add_argument('--interactive', help='Spawns a pseudo-interactive shell', action='store_true', required=False)
+		parser.add_argument('--proxy', help='An optionnal proxy', required=False)
+
+		args = parser.parse_args()
+
+		if args.password and not args.user:
+			print '[!] Please provide a username'
+			sys.exit(0)
+
+		if args.user:
+			auth = (args.user, args.password)
+		else:
+			auth = None
+
+		$2 = $1(args.url, auth, args.proxy)
+		if args.interactive:
+			shell = $1Shell($2)
+			shell.cmdloop()
+		else:
+			print $2.execute(args.cmd)
+
+snippet flask
+	#!/usr/bin/env python
+
+	import os
+	from flask import Flask, request, redirect, url_for
+	from werkzeug import secure_filename
+
+	ENV_VAL = "test"
+
+	app = Flask(__name__)
+	app.config['ENV_VAL'] =  ENV_VAL
+
+
+	@app.route("/", methods=['GET', 'POST'])
+	def index():
+		if request.method == 'POST':
+				return redirect(url_for('index'))
+		else:
+			return "body"
+
+	if __name__ == "__main__":
+		app.run(host='0.0.0.0', port=5001, debug=True)
+
+snippet cyclone
+	import cyclone.web
+	from twisted.internet import reactor
+
+	class MainHandler(cyclone.web.RequestHandler):
+		def get(self):
+			self.write("Hello, world")
+
+	if __name__ == "__main__":
+		application = cyclone.web.Application([
+			(r"/", MainHandler),
+		])
+		reactor.listenTCP(8888, application)
+		reactor.run()
+
+snippet socketsend
+	import socket
+
+	${1:socket} = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+	$1.connect(('${2:host}', ${3:port}))
+	$1.send("test")
+
+	while True:
+		data = $1.recv(1024)
+		${0}
+		if not data: break
+	
+	conn.close()
+
+snippet socketbind
+	import socket
+
+	${1:socket} = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+	$1.bind(('${2:host}', ${3:port}))
+
+	while True:
+			$1.listen(5)
+			client, address = $1.accept()
+			print "{} connected".format( address )
+
+			response = client.recv(255)
+			if response != "":
+					print response
+
+	print "Close"
+	client.close()
+	$1.close()
