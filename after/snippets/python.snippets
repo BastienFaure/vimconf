@@ -1,3 +1,54 @@
+snippet windoz
+
+	#!/usr/bin/env python
+	# -*- coding: utf-8 -*-
+
+	import argparse
+
+
+	class Identity(object):
+
+		def __init__(self, username, password, domain_fqdn):
+			self.username = username
+			self.domain_fqdn = domain_fqdn
+			self.password = password
+
+		def ${2:dostuff}(self):
+			${3:dostuffbody}
+
+	if __name__ == "__main__":
+		parser = argparse.ArgumentParser('${1:toolname}')
+		parser.add_argument('-u', '--username', help="The username", required=True)
+		parser.add_argument('-p', '--password', help="The password", required=True)
+		parser.add_argument('-d', '--fqdn', help="The domain FQDN (ex : domain.local)", required=True)
+		parser.add_argument('-t', '--target', help="The IP address of a DNS server", required=True)
+
+		args = parser.parse_args()
+		identity = Identity(args.username, args.password, args.fqdn, args.target)
+		identity.$2(target)
+
+
+snippet parallel
+	#!/usr/bin/env python
+
+	from multiprocessing.dummy import Pool as ThreadPool
+	from tqdm import tqdm
+
+	def ${1:parallelized}(bar):
+		${3:funcbody}
+		pass
+
+	if __name__ == "__main__":
+	
+		${2:consumed} = list()
+		# do stuff, populate data
+
+		pool = ThreadPool(20)
+		with tqdm(total=len(data)) as pbar:
+			for _ in pool.imap_unordered($1, $2):
+				pbar.update()
+
+
 snippet cmdexec
 	#!/usr/bin/env python
 
