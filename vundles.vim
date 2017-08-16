@@ -28,7 +28,8 @@ Plugin 'jmcantrell/vim-virtualenv'
 "Plugin 'nvie/vim-flake8'
 
 " Syntaxe
-Plugin 'scrooloose/syntastic'
+"Plugin 'scrooloose/syntastic'
+Plugin 'w0rp/ale'
 
 "Snipmate
 Plugin 'MarcWeber/vim-addon-mw-utils'

@@ -147,23 +147,29 @@ let g:airline_theme='wombat'
 "  Use 256 colours (Use this setting only if your terminal supports 256 colours)
 set t_Co=256
 
-" ============= Syntastic syntax checks ==============
-let g:syntastic_check_on_wq = 0
-let g:syntastic_check_on_open = 1
-" Automatically show the error lists
-let g:syntastic_auto_loc_list=1
-let g:syntastic_disabled_filetypes=['html']
-" Disable tabs warning throwns by pylint
-let g:syntastic_python_checkers = ["pep8"]
-let g:syntastic_python_pep8_args="--ignore=W191,E501"
-" Enable the sign interface
-let g:syntastic_enable_signs=1
-" Change some symbols
-let g:syntastic_error_symbol = "✗"
-let g:syntastic_style_error_symbol = "✗"
-let g:syntastic_warning_symbol = "⚠"
-let g:syntastic_style_warning_symbol = "⚠"
-let g:syntastic_always_populate_loc_list = 1
+" ============= Ale syntax checks ==============
+let g:ale_sign_error = '✗'
+let g:ale_sign_warning = '⚠'
+let g:ale_linters = {
+\	"python": ["flake8"],
+\}
+let g:ale_python_flake8_options="--ignore=W191,E501"
+"let g:syntastic_check_on_wq = 0
+"let g:syntastic_check_on_open = 1
+"" Automatically show the error lists
+"let g:syntastic_auto_loc_list=1
+"let g:syntastic_disabled_filetypes=['html']
+"" Disable tabs warning throwns by pylint
+"let g:syntastic_python_checkers = ["pep8"]
+"let g:syntastic_python_pep8_args="--ignore=W191,E501"
+"" Enable the sign interface
+"let g:syntastic_enable_signs=1
+"" Change some symbols
+"let g:syntastic_error_symbol = "✗"
+"let g:syntastic_style_error_symbol = "✗"
+"let g:syntastic_warning_symbol = "⚠"
+"let g:syntastic_style_warning_symbol = "⚠"
+"let g:syntastic_always_populate_loc_list = 1
 
 " =============== Gvim ===============================
 " Hide toolbar and menubar
