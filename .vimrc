@@ -155,7 +155,7 @@ let g:syntastic_auto_loc_list=1
 let g:syntastic_disabled_filetypes=['html']
 " Disable tabs warning throwns by pylint
 let g:syntastic_python_checkers = ["pep8"]
-let g:syntastic_python_pep8_args="--ignore=W191"
+let g:syntastic_python_pep8_args="--ignore=W191,E501"
 " Enable the sign interface
 let g:syntastic_enable_signs=1
 " Change some symbols
