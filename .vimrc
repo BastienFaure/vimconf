@@ -169,3 +169,6 @@ let g:syntastic_always_populate_loc_list = 1
 " Hide toolbar and menubar
 set guioptions-=m  "menu bar
 set guioptions-=T  "toolbar
+
+" ================ Snippets
+set rtp+=~/.vim/custom-snippets/
