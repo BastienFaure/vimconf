@@ -81,12 +81,14 @@ set noexpandtab		" do not replace tab with spaces
 au FileType html,htmldjango setl sw=2 sts=2 ts=2
 au FileType html,htmldjango setl sw=2 sts=2 ts=2
 au BufNewFile,BufRead *.sls setl sw=2 sts=2 ts=2
+au FileType python setl noexpandtab tabstop=4 shiftwidth=4
 
 "filetype plugin on  " enables extended filetype detection via standards scripts and plugins
 "filetype indent off " disables filetype indentation because it overrides global indent configuration
 
 " Display tabs and trailing spaces visually
-set list listchars=tab:\ \ ,trail:·
+set list listchars=tab:▸\ ,trail:·,precedes:←,extends:→,eol:↲,nbsp:␣
+set showbreak=↪\
 
 set wrap       "Don't wrap lines
 set linebreak    "Wrap lines at convenient points
