@@ -1,6 +1,7 @@
 " Use Vim settings, rather then Vi settings (much better!).
 " This must be first, because it changes other options as a side effect.
 set nocompatible
+filetype off " required
 
 " TODO: this may not be in the correct place. It is intended to allow overriding <Leader>.
 " source ~/.vimrc.before if it exists.
@@ -180,3 +181,10 @@ set guioptions-=T  "toolbar
 
 " ================ Snippets
 set rtp+=~/.vim/custom-snippets/
+
+" ================ Markdown
+let g:vim_markdown_fenced_languages = ['python=python']
+set conceallevel=2
+
+map <F12> o<C-R>=strftime("[%d %b %Y - %H:%M (%Z)] ")<CR>
+imap <F12> <C-R>=strftime("[%d %b %Y - %H:%M (%Z)] ")<CR>
