@@ -2,11 +2,6 @@
 " required! 
 Plugin 'gmarik/vundle'
 
-" Markdown highlighting plugin
-Plugin 'tpope/vim-markdown'
-" Some hacks to enable syntax colorlation for .md files
-au BufRead,BufNewFile *.md set filetype=markdown
-
 " Nerdtree
 Plugin 'scrooloose/nerdtree'
 map <C-n> :NERDTreeToggle<CR>
@@ -47,3 +42,10 @@ Plugin 'jnurmine/Zenburn'
 
 " Conque-Shell
 Plugin 'vim-scripts/Conque-Shell'
+
+" Markdown
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
+
+" Textile
+Plugin 'timcharper/textile.vim'
