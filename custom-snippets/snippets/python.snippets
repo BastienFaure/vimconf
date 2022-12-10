@@ -138,7 +138,7 @@ snippet flask
 
 	import os
 	from flask import Flask, request, redirect, url_for
-	from werkzeug import secure_filename
+	from werkzeug.utils import secure_filename
 
 	ENV_VAL = "test"
 
@@ -203,3 +203,32 @@ snippet socketbind
 	print "Close"
 	client.close()
 	$1.close()
+
+snippet logging
+	from termcolor import colored
+	import traceback
+	from sys import __stdout__, __stderr__, exit
+
+
+	def info(content):
+		__stderr__.write("%s\n" % colored("[*] " + str(content), "blue", attrs=["bold"]))
+
+
+	def success(content):
+		__stderr__.write("%s\n" % colored("[+] " + str(content), "green", attrs=["bold"]))
+
+
+	def warning(content):
+		__stderr__.write("%s\n" % colored("[+] " + str(content), "yellow", attrs=["bold"]))
+
+
+	def error(content):
+		__stderr__.write("%s\n" % colored("[!] " + str(content), "red", attrs=["bold"]))
+		exit(1)
+
+
+	def failure(content):
+		__stderr__.write("%s\n" % colored("[!] " + str(content), "red", attrs=["bold"]))
+		traceback.print_exc()
+		exit(1)
+

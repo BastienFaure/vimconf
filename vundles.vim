@@ -24,7 +24,7 @@ Plugin 'jmcantrell/vim-virtualenv'
 
 " Syntaxe
 "Plugin 'scrooloose/syntastic'
-Plugin 'w0rp/ale'
+Plugin 'dense-analysis/ale'
 
 "Snipmate
 Plugin 'MarcWeber/vim-addon-mw-utils'
@@ -49,3 +49,9 @@ Plugin 'plasticboy/vim-markdown'
 
 " Textile
 Plugin 'timcharper/textile.vim'
+
+" Powershell
+Plugin 'PProvost/vim-ps1.git'
+
+" Checkboxes
+Plugin 'jkramer/vim-checkbox'

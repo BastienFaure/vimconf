@@ -26,6 +26,7 @@ set autoread                    "Reload files changed outside vim
 set hidden
 
 
+
 " Change leader to a comma because the backslash is too far away
 " That means all \x commands turn into ,x
 " The mapleader has to be set before vundle starts loading all 
@@ -50,11 +51,10 @@ call vundle#end()
 " ============== Monokai colorscheme ================
 "turn on syntax highlighting
 syntax enable
-colorscheme hybrid_reverse
+colorscheme molokai
 
 
 " ================ Turn Off Swap Files ==============
-
 set noswapfile
 set nobackup
 set nowb
@@ -62,14 +62,12 @@ set nowb
 " ================ Persistent Undo ==================
 " Keep undo history across sessions, by storing in file.
 " Only works all the time.
-
 silent !mkdir ~/.vim/backups > /dev/null 2>&1
 set undodir=~/.vim/backups
 set undofile
 set undolevels=1000 "maximum number of changes that can be undone
 
 " ================ Indentation ======================
-
 set autoindent		" replicates indentation from the previous lines to the new one
 set smartindent		" insert extra indentations for special code strucutre like classes, structs...
 set smarttab		" insert shiftwidth instead of tabstop at the beginning of the line, allows tab deletion with <BS>
@@ -95,13 +93,11 @@ set wrap       "Don't wrap lines
 set linebreak    "Wrap lines at convenient points
 
 " ================ Folds ============================
-
 set foldmethod=indent   "fold based on indent
 set foldnestmax=3       "deepest fold is 3 levels
 set nofoldenable        "dont fold by default
 
 " ================ Completion =======================
-
 set wildmode=list:longest
 set wildmenu                "enable ctrl-n and ctrl-p to scroll thru matches
 set wildignore=*.o,*.obj,*~ "stuff to ignore when tab completing
@@ -117,23 +113,19 @@ set wildignore+=*.png,*.jpg,*.gif
 
 
 " ================ Scrolling ========================
-
 set scrolloff=8         "Start scrolling when we're 8 lines away from margins
 set sidescrolloff=15
 set sidescroll=1
 
 
 " =================== Mouse  ========================
-
 " set mouse=a
 " set ttymouse=urxvt
 
 " =================== LateX  ========================
-
 let g:tex_flavor = "latex"
 
 " ============== Custom Filetypes ===================
-
 au BufNewFile,BufRead *.xrc set filetype=xdefaults
 au BufNewFile,BufRead *.nse set filetype=lua
 
@@ -156,7 +148,8 @@ let g:ale_sign_warning = '⚠'
 let g:ale_linters = {
 \	"python": ["flake8"],
 \}
-let g:ale_python_flake8_options="--ignore=W191,E501"
+let g:ale_python_flake8_options="--ignore=W191,E501,E117"
+let g:ale_pattern_options = {'\.rb$': {'ale_enabled': 0}}
 "let g:syntastic_check_on_wq = 0
 "let g:syntastic_check_on_open = 1
 "" Automatically show the error lists
@@ -184,7 +177,13 @@ set rtp+=~/.vim/custom-snippets/
 
 " ================ Markdown
 let g:vim_markdown_fenced_languages = ['python=python']
+let g:vim_markdown_folding_level = 6
 set conceallevel=2
 
-map <F12> o<C-R>=strftime("[%d %b %Y - %H:%M (%Z)] ")<CR>
-imap <F12> <C-R>=strftime("[%d %b %Y - %H:%M (%Z)] ")<CR>
+map <F12> o<C-R>=strftime("* [%d %b %Y - %H:%M (%Z)] ")<CR>
+imap <F12> <C-R>=strftime("* [%d %b %Y - %H:%M (%Z)] ")<CR>
+map <r><p><t> o<C-R>=strftime("### %d %b %Y\n")<CR>
+imap <r><p><t> <C-R>=strftime("### %d %b %Y\n")<CR>
+"autocmd FileType markdown inoremap <F2> :r !xsel -b<CR>
+inoremap <F2> :r!xsel -b<CR>
+
